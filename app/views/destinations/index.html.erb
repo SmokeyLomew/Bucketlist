@@ -1,0 +1,13 @@
+<h1>Destinations Index</h1>
+
+<p><%= link_to 'Create new destination', new_destination_path %></p>
+    <% @destinations.each do |destination| %>
+        <h2><%= destination.title %></h2>
+        
+        <%= link_to 'Show Destination', destination_path(destination.id)%>
+       
+        <%= link_to 'Edit destination', edit_destination_path(destination.id)%>
+
+        <%= link_to 'Destroy Destination', destination_path(destination.id), :method => :delete %>
+
+        <% end %>
